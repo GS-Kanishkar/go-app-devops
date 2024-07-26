@@ -7,51 +7,125 @@
     <title>Home</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #e0e0e0;
+            color: #333;
         }
 
         header {
-            background-color: #333;
+            background-color: #003366;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
+            padding: 20px;
+            text-align: right;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: inline-block;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
         }
 
         nav ul li {
-            display: inline;
-            margin-right: 10px;
+            margin: 0;
         }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d4d4d4;
         }
 
         main {
-            padding: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h1, section h2 {
+            color: #003366;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: #f9f9f9;
+            border-left: 5px solid #003366;
+            padding: 20px;
             margin-bottom: 20px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .technologies {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .technologies ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .technologies ul li {
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         footer {
-            background-color: #333;
+            background-color: #003366;
             color: #fff;
             text-align: center;
             padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
         }
-    </style>    
+
+        a {
+            color: #003366;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #001a33;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -66,26 +140,27 @@
     </header>
 
     <main>
-        <section>
-            <h1>Learn DevOps from Basics</h1>
-            <p>The main purpose of this website is to guide people on how to learn DevOps 
-                from basics for Free. We will provide you with the best resources to learn.
-            </p>
+
+        <section class="highlight">
+            <h2>🚀 Project Highlights</h2>
+            <p>Built a Golang app, dockerized it, and deployed on EKS with CI/CD. Automated the build, push, and Helm updates using GitHub Actions, while Argo CD handles deployments seamlessly. 📈💻</p>
         </section>
 
-        <section>
-            <h2>Overview</h2>
-            <p> Zero to Hero courses on all DevOps tools and popular Cloud(AWS and Azure) platform</p>
-        </section>
-
-        <section>
-            <h2>Courses Offered</h2>
-            <p>Please look at the <a href="courses">courses</a> section.</p>  
+        <section class="technologies">
+            <h2>🔧 Technologies Used</h2>
+            <ul>
+                <li>Docker</li>
+                <li>Kubernetes (EKS)</li>
+                <li>GitHub Actions</li>
+                <li>Helm</li>
+                <li>Argo CD</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Abhishek.Veeramalla</p>
-    </footer>
+    <p>Special thanks to Abhishek.Veeramalla for his exceptional YouTube course on DevOps, which was instrumental in building this project.</p>
+</footer>
+
 </body>
 </html>
